@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="phone list," />
+
+    <title>You | Phone List</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/images/icons/favicon.ico" />
+  </head>
+
+  <body>
+    <header>
+      <!-- START NAVBAR -->
+      <nav
+        class="navbar navbar--user navbar-expand-md navbar-light"
+        id="user-nav"
+      >
+        <div class="container-fluid justify-content-end">
+          <a class="navbar-brand" href="../index.html">
+            <img
+              class="img-fluid"
+              src="../assets/images/logo.svg"
+              alt="phone list"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler me-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item pl-4">
+                <a class="nav-link" aria-current="page" href="../home.html">
+                  <i class="bi bi-house-door"></i>
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item" id="search">
+                <a class="nav-link" href="../people.html">
+                  <i class="bi bi-search"></i>
+                  Data Search
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../settings/upgrade.html">
+                  <i class="bi bi-box-seam"></i>
+                  Products
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- START SHOW ELEMENT ON CLICKING USER -->
+          <div class="user-div hide u-box-shadow-1">
+            <h4 class="px-4 pt-5">Shamonti Haque</h4>
+            <div class="user--label mx-4">
+              <span>Admin</span>
+            </div>
+
+            <div class="user--menu">
+              <a class="user--menu-item" href="../settings/account.html">
+                <i class="bi bi-gear"></i>
+                <span>Settings</span>
+              </a>
+              <a class="user--menu-item" href="../settings/upgrade.html">
+                <i class="bi bi-trophy"></i>
+                <span>Upgrade Plan</span>
+              </a>
+
+              <a class="user--menu-item mb-3" href="../login.html">
+                <i class="bi bi-power"></i>
+                <span>Logout</span>
+              </a>
+            </div>
+          </div>
+          <!-- END SHOW ELEMENT ON CLICKING USER -->
+        </div>
+
+        <!-- START RIGHT NAV ITEMS -->
+        <div class="d-flex align-items-center nav-right__box">
+          <a class="btn btn-purple mx-4" href="../settings/upgrade.html"
+            >Get unlimited leads
+          </a>
+          <button type="button" class="btn">
+            <a href="#">
+              <i class="bi bi-telephone phone-btn"></i>
+            </a>
+          </button>
+
+          <!-- Link to Blog site -->
+          <a class="btn" href="http://help.phonelist.io/">
+            <i class="bi bi-question-circle"></i>
+          </a>
+
+          <button type="button" class="btn notification-btn">
+            <i class="bi bi-bell"></i>
+
+            <!-- Add the class hide to notification-btn--badge when there is no notifications -->
+            <span class="notification-btn--badge"></span>
+          </button>
+          <button
+            type="button"
+            id="userBtn"
+            class="user user-btn circle-element mx-3"
+          >
+            <p class="user-name">SH</p>
+          </button>
+        </div>
+        <!-- END RIGHT NAV ITEMS -->
+      </nav>
+      <!-- END NAVBAR -->
+
+      <!-- START SHOW WHEN CLICKED ON NOTIFICATION -->
+      <div
+        class="u-box-shadow-1 notification__sidebar hide animate__animated animate__fadeInRightBig"
+      >
+        <div class="notification--header">
+          <div class="notification--header-title">
+            <h5>NOTIFICATIONS</h5>
+          </div>
+          <div class="notification--header-icons">
+            <div class="btn close-btn">
+              <i class="bi bi-x-lg"></i>
+            </div>
+          </div>
+        </div>
+        <div class="notification--body">
+          <a class="card" href="#">
+            <div class="card-body">
+              <div class="notification-icon">
+                <i class="bi bi-shield-lock-fill"></i>
+              </div>
+              <div class="notification-box">
+                <div class="notification-text">You changed your password.</div>
+                <div class="notification-time">
+                  <span> Today </span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <div class="card-body">
+              <div class="notification-icon">
+                <i class="bi bi-lightning-fill"></i>
+              </div>
+              <div class="notification-box">
+                <div class="notification-text">You upgraded your plan.</div>
+                <div class="notification-time">
+                  <span> Yesterday </span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <div class="card-body">
+              <div class="notification-icon">
+                <i class="bi bi-receipt-cutoff"></i>
+              </div>
+              <div class="notification-box">
+                <div class="notification-text">You accessed phone number.</div>
+                <div class="notification-time">
+                  <span> May 02 </span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <div class="card-body">
+              <div class="notification-icon">
+                <i class="bi bi-download"></i>
+              </div>
+              <div class="notification-box">
+                <div class="notification-text">You downloaded csv data.</div>
+                <div class="notification-time">
+                  <span> Apr 26 </span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <div class="card-body">
+              <div class="notification-icon">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div class="notification-box">
+                <div class="notification-text">
+                  You requested to change the email.
+                </div>
+                <div class="notification-time">
+                  <span> Apr 20 </span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <div class="card-body">
+              <div class="notification-icon">
+                <i class="bi bi-person-bounding-box"></i>
+              </div>
+              <div class="notification-box">
+                <div class="notification-text">You edited your profile.</div>
+                <div class="notification-time">
+                  <span> Mar 24 </span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <div class="card-body">
+              <div class="notification-icon">
+                <i class="bi bi-download"></i>
+              </div>
+              <div class="notification-box">
+                <div class="notification-text">You downloaded csv data.</div>
+                <div class="notification-time">
+                  <span> Mar 20 </span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <div class="card-body">
+              <div class="notification-icon">
+                <i class="bi bi-credit-card"></i>
+              </div>
+              <div class="notification-box">
+                <div class="notification-text">You added a credit card.</div>
+                <div class="notification-time">
+                  <span> Feb 22 </span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <div class="card-body">
+              <div class="notification-icon"><i class="bi bi-stars"></i></div>
+              <div class="notification-box">
+                <div class="notification-text">Welcome to Phone List!</div>
+                <div class="notification-time">
+                  <span> Dec 2021 </span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="card" href="./notifications.html">
+            <div class="card-footer">All notifications</div>
+          </a>
+        </div>
+      </div>
+      <!-- END SHOW WHEN CLICKED ON NOTIFICATION -->
+    </header>
+
+    <main>
+      <section class="section-settings d-flex">
+        <!-- START SIDEBAR -->
+        <section class="d-flex flex-column flex-shrink-0 p-4 section-sidebar">
+          <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+              <span class="text-uppercase">Personal Profile</span>
+              <a
+                href="account.html"
+                class="nav-link active"
+                aria-current="page"
+              >
+                <h2 class="m-0">You</h2>
+              </a>
+            </li>
+            <li class="nav-item mt-4">
+              <span class="text-uppercase">Admin Settings</span>
+              <a href="plans.html" class="nav-link"> Manage Plan </a>
+            </li>
+            <li class="nav-item mt-4">
+              <span class="text-uppercase">System Activity</span>
+              <a href="exports/exports.html" class="nav-link"> Exports </a>
+            </li>
+            <li class="nav-item">
+              <a href="credits/current.html" class="nav-link"> Credit Usage </a>
+            </li>
+            <li class="nav-item">
+              <a href="./notifications.html" class="nav-link">
+                Notifications
+              </a>
+            </li>
+          </ul>
+        </section>
+        <!-- END SIDEBAR -->
+
+        <!-- START MAIN -->
+        <section class="section-main">
+          <div class="card u-box-shadow-2 m-4 border rounded-3">
+            <div
+              class="card-title d-flex align-items-center justify-content-between"
+            >
+              <h1 class="p-4 text-capitalize">Account Info</h1>
+              <button type="button" class="btn btn-purple me-3">Save</button>
+            </div>
+
+            <div class="card-body p-4">
+              <form action="">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="mb-3">
+                      <label for="fname" class="form-label">First Name</label>
+                      <input type="text" class="form-control" id="fname" />
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="mb-3">
+                      <label for="lname" class="form-label">Last Name</label>
+                      <input type="text" class="form-control" id="lname" />
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="mb-3">
+                      <label for="title" class="form-label">Title</label>
+                      <input type="text" class="form-control" id="title" />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="mb-3">
+                      <label for="number" class="form-label"
+                        >Phone Number</label
+                      >
+                      <input type="number" class="form-control" id="number" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="address" class="form-label">Address</label>
+                      <input type="text" class="form-control" id="address" />
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <label for="country" class="form-label">Country</label>
+
+                    <div class="dropdown" id="country">
+                      <input
+                        class="searchBar bg-white text-dark fw-normal col-12"
+                        id="countryDropdown"
+                        type="text"
+                        placeholder="Bangladesh"
+                        data-toggle="dropdown"
+                        data-bs-toggle="dropdown"
+                      />
+
+                      <span class="caret"></span>
+
+                      <ul
+                        class="dropdown-menu bg-white text-dark fw-bold p-3"
+                        aria-labelledby="countryDropdown"
+                      >
+                        <li class="dropdown-item">
+                          <a href="#">Afghanistan</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Åland Islands</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Albania</a></li>
+                        <li class="dropdown-item"><a href="#">Algeria</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">American Samoa</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Andorra</a></li>
+                        <li class="dropdown-item"><a href="#">Angola</a></li>
+                        <li class="dropdown-item"><a href="#">Anguilla</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Antarctica</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Antigua and Barbuda</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Argentina</a></li>
+                        <li class="dropdown-item"><a href="#">Armenia</a></li>
+                        <li class="dropdown-item"><a href="#">Aruba</a></li>
+                        <li class="dropdown-item"><a href="#">Australia</a></li>
+                        <li class="dropdown-item"><a href="#">Austria</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Azerbaijan</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Bahamas</a></li>
+                        <li class="dropdown-item"><a href="#">Bahrain</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Bangladesh</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Barbados</a></li>
+                        <li class="dropdown-item"><a href="#">Belarus</a></li>
+                        <li class="dropdown-item"><a href="#">Belgium</a></li>
+                        <li class="dropdown-item"><a href="#">Belize</a></li>
+                        <li class="dropdown-item"><a href="#">Benin</a></li>
+                        <li class="dropdown-item"><a href="#">Bermuda</a></li>
+                        <li class="dropdown-item"><a href="#">Bhutan</a></li>
+                        <li class="dropdown-item"><a href="#">Bolivia</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Bosnia and Herzegovina</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Botswana</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Bouvet Island</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Brazil</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">British Indian Ocean Territory</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Brunei Darussalam</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Bulgaria</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Burkina Faso</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Burundi</a></li>
+                        <li class="dropdown-item"><a href="#">Cambodia</a></li>
+                        <li class="dropdown-item"><a href="#">Cameroon</a></li>
+                        <li class="dropdown-item"><a href="#">Canada</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Cape Verde</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Cayman Islands</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Central African Republic</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Chad</a></li>
+                        <li class="dropdown-item"><a href="#">Chile</a></li>
+                        <li class="dropdown-item"><a href="#">China</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Christmas Island</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Cocos (Keeling) Islands</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Colombia</a></li>
+                        <li class="dropdown-item"><a href="#">Comoros</a></li>
+                        <li class="dropdown-item"><a href="#">Congo</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Congo, The Democratic Republic of The</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Cook Islands</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Costa Rica</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Cote D'ivoire</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Croatia</a></li>
+                        <li class="dropdown-item"><a href="#">Cuba</a></li>
+                        <li class="dropdown-item"><a href="#">Cyprus</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Czech Republic</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Denmark</a></li>
+                        <li class="dropdown-item"><a href="#">Djibouti</a></li>
+                        <li class="dropdown-item"><a href="#">Dominica</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Dominican Republic</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Ecuador</a></li>
+                        <li class="dropdown-item"><a href="#">Egypt</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">El Salvador</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Equatorial Guinea</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Eritrea</a></li>
+                        <li class="dropdown-item"><a href="#">Estonia</a></li>
+                        <li class="dropdown-item"><a href="#">Ethiopia</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Falkland Islands (Malvinas)</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Faroe Islands</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Fiji</a></li>
+                        <li class="dropdown-item"><a href="#">Finland</a></li>
+                        <li class="dropdown-item"><a href="#">France</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">French Guiana</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">French Polynesia</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">French Southern Territories</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Gabon</a></li>
+                        <li class="dropdown-item"><a href="#">Gambia</a></li>
+                        <li class="dropdown-item"><a href="#">Georgia</a></li>
+                        <li class="dropdown-item"><a href="#">Germany</a></li>
+                        <li class="dropdown-item"><a href="#">Ghana</a></li>
+                        <li class="dropdown-item"><a href="#">Gibraltar</a></li>
+                        <li class="dropdown-item"><a href="#">Greece</a></li>
+                        <li class="dropdown-item"><a href="#">Greenland</a></li>
+                        <li class="dropdown-item"><a href="#">Grenada</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Guadeloupe</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Guam</a></li>
+                        <li class="dropdown-item"><a href="#">Guatemala</a></li>
+                        <li class="dropdown-item"><a href="#">Guernsey</a></li>
+                        <li class="dropdown-item"><a href="#">Guinea</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Guinea-bissau</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Guyana</a></li>
+                        <li class="dropdown-item"><a href="#">Haiti</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Heard Island and Mcdonald Islands</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Holy See (Vatican City State)</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Honduras</a></li>
+                        <li class="dropdown-item"><a href="#">Hong Kong</a></li>
+                        <li class="dropdown-item"><a href="#">Hungary</a></li>
+                        <li class="dropdown-item"><a href="#">Iceland</a></li>
+                        <li class="dropdown-item"><a href="#">India</a></li>
+                        <li class="dropdown-item"><a href="#">Indonesia</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Iran, Islamic Republic of</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Iraq</a></li>
+                        <li class="dropdown-item"><a href="#">Ireland</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Isle of Man</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Israel</a></li>
+                        <li class="dropdown-item"><a href="#">Italy</a></li>
+                        <li class="dropdown-item"><a href="#">Jamaica</a></li>
+                        <li class="dropdown-item"><a href="#">Japan</a></li>
+                        <li class="dropdown-item"><a href="#">Jersey</a></li>
+                        <li class="dropdown-item"><a href="#">Jordan</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Kazakhstan</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Kenya</a></li>
+                        <li class="dropdown-item"><a href="#">Kiribati</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Korea, Democratic People's Republic of</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Korea, Republic of</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Kuwait</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Kyrgyzstan</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Lao People's Democratic Republic</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Latvia</a></li>
+                        <li class="dropdown-item"><a href="#">Lebanon</a></li>
+                        <li class="dropdown-item"><a href="#">Lesotho</a></li>
+                        <li class="dropdown-item"><a href="#">Liberia</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Libyan Arab Jamahiriya</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Liechtenstein</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Lithuania</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Luxembourg</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Macao</a></li>
+                        <li class="dropdown-item">
+                          <a href="#"
+                            >Macedonia, The Former Yugoslav Republic of</a
+                          >
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Madagascar</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Malawi</a></li>
+                        <li class="dropdown-item"><a href="#">Malaysia</a></li>
+                        <li class="dropdown-item"><a href="#">Maldives</a></li>
+                        <li class="dropdown-item"><a href="#">Mali</a></li>
+                        <li class="dropdown-item"><a href="#">Malta</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Marshall Islands</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Martinique</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Mauritania</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Mauritius</a></li>
+                        <li class="dropdown-item"><a href="#">Mayotte</a></li>
+                        <li class="dropdown-item"><a href="#">Mexico</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Micronesia, Federated States of</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Moldova, Republic of</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Monaco</a></li>
+                        <li class="dropdown-item"><a href="#">Mongolia</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Montenegro</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Montserrat</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Morocco</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Mozambique</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Myanmar</a></li>
+                        <li class="dropdown-item"><a href="#">Namibia</a></li>
+                        <li class="dropdown-item"><a href="#">Nauru</a></li>
+                        <li class="dropdown-item"><a href="#">Nepal</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Netherlands</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Netherlands Antilles</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">New Caledonia</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">New Zealand</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Nicaragua</a></li>
+                        <li class="dropdown-item"><a href="#">Niger</a></li>
+                        <li class="dropdown-item"><a href="#">Nigeria</a></li>
+                        <li class="dropdown-item"><a href="#">Niue</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Norfolk Island</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Northern Mariana Islands</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Norway</a></li>
+                        <li class="dropdown-item"><a href="#">Oman</a></li>
+                        <li class="dropdown-item"><a href="#">Pakistan</a></li>
+                        <li class="dropdown-item"><a href="#">Palau</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Palestinian Territory, Occupied</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Panama</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Papua New Guinea</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Paraguay</a></li>
+                        <li class="dropdown-item"><a href="#">Peru</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Philippines</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Pitcairn</a></li>
+                        <li class="dropdown-item"><a href="#">Poland</a></li>
+                        <li class="dropdown-item"><a href="#">Portugal</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Puerto Rico</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Qatar</a></li>
+                        <li class="dropdown-item"><a href="#">Reunion</a></li>
+                        <li class="dropdown-item"><a href="#">Romania</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Russian Federation</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Rwanda</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Saint Helena</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Saint Kitts and Nevis</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Saint Lucia</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Saint Pierre and Miquelon</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Saint Vincent and The Grenadines</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Samoa</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">San Marino</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Sao Tome and Principe</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Saudi Arabia</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Senegal</a></li>
+                        <li class="dropdown-item"><a href="#">Serbia</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Seychelles</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Sierra Leone</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Singapore</a></li>
+                        <li class="dropdown-item"><a href="#">Slovakia</a></li>
+                        <li class="dropdown-item"><a href="#">Slovenia</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Solomon Islands</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Somalia</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">South Africa</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#"
+                            >South Georgia and The South Sandwich Islands</a
+                          >
+                        </li>
+                        <li class="dropdown-item"><a href="#">Spain</a></li>
+                        <li class="dropdown-item"><a href="#">Sri Lanka</a></li>
+                        <li class="dropdown-item"><a href="#">Sudan</a></li>
+                        <li class="dropdown-item"><a href="#">Suriname</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Svalbard and Jan Mayen</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Swaziland</a></li>
+                        <li class="dropdown-item"><a href="#">Sweden</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Switzerland</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Syrian Arab Republic</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Taiwan (ROC)</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Tajikistan</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Tanzania, United Republic of</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Thailand</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Timor-leste</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Togo</a></li>
+                        <li class="dropdown-item"><a href="#">Tokelau</a></li>
+                        <li class="dropdown-item"><a href="#">Tonga</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Trinidad and Tobago</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Tunisia</a></li>
+                        <li class="dropdown-item"><a href="#">Turkey</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Turkmenistan</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Turks and Caicos Islands</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Tuvalu</a></li>
+                        <li class="dropdown-item"><a href="#">Uganda</a></li>
+                        <li class="dropdown-item"><a href="#">Ukraine</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">United Arab Emirates</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">United Kingdom</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">United States</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">United States Minor Outlying Islands</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Uruguay</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Uzbekistan</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Vanuatu</a></li>
+                        <li class="dropdown-item"><a href="#">Venezuela</a></li>
+                        <li class="dropdown-item"><a href="#">Viet Nam</a></li>
+                        <li class="dropdown-item">
+                          <a href="#">Virgin Islands, British</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Virgin Islands, U.S.</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Wallis and Futuna</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a href="#">Western Sahara</a>
+                        </li>
+                        <li class="dropdown-item"><a href="#">Yemen</a></li>
+                        <li class="dropdown-item"><a href="#">Zambia</a></li>
+                        <li class="dropdown-item"><a href="#">Zimbabwe</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </form>
+
+              <div class="row">
+                <div class="col-md-4">
+                  <div>
+                    <label for="email" class="form-label">Email</label>
+                    <span class="form-span d-block" id="email"
+                      >shamonti.haque98@gmail.com</span
+                    >
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-center">
+                  <a
+                    data-bs-toggle="modal"
+                    href="#changeEmailModal"
+                    class="btn btn-change mt-3"
+                  >
+                    <i class="bi bi-shield-lock"></i>
+                    Change Email
+                  </a>
+
+                  <div class="modal" id="changeEmailModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h3 class="modal-title">Change Email</h3>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-hidden="true"
+                          ></button>
+                        </div>
+                        <div class="modal-body mb-3">
+                          <form>
+                            <div>
+                              <label for="" class="form-label"
+                                >New Email:</label
+                              >
+                              <input type="email" class="form-control" />
+                            </div>
+                          </form>
+                          <!-- When clicked on change email button without any
+                            input in above form -->
+                          <span class="text-danger fs-5"
+                            >New Email is required</span
+                          >
+                        </div>
+                        <div class="modal-footer">
+                          <a
+                            data-bs-toggle="modal"
+                            href="#errorModal"
+                            class="btn btn-primary"
+                            >Change Email</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal" id="errorModal" data-bs-backdrop="static">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title d-flex align-items-center">
+                            <i
+                              class="bi bi-exclamation-triangle text-danger fs-2 pe-3"
+                            ></i>
+                            Error
+                          </h5>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-hidden="true"
+                          ></button>
+                        </div>
+                        <div class="container"></div>
+                        <div class="modal-body">
+                          This email is already taken!
+                        </div>
+                        <!-- <div class="modal-body">
+                          This email is already taken! 
+                          This email is the same
+                          as your current email!
+                        </div> -->
+                        <div class="modal-footer d-flex justify-content-end">
+                          <a
+                            href="#"
+                            data-bs-dismiss="modal"
+                            class="btn btn-primary"
+                            >OK</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- After new email has been set using the modal and awaiting confirmation -->
+              <div class="row mb-4">
+                <div class="col-md-12">
+                  <span class="text-danger">
+                    <i class="bi bi-hourglass"></i>
+                    Pending confirmation to change email to
+                    someothermail@gmail.com</span
+                  >
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <label for="password" class="form-label">Password</label>
+                </div>
+                <div class="col-md-4 d-flex align-items-center">
+                  <button
+                    type="button"
+                    class="btn btn-change"
+                    data-bs-toggle="modal"
+                    data-bs-target="#changePassword"
+                  >
+                    <i class="bi bi-shield-lock"></i>
+                    Change Password
+                  </button>
+
+                  <!-- Modal -->
+                  <div
+                    class="modal fade"
+                    id="changePassword"
+                    tabindex="-1"
+                    aria-labelledby="changePassword"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h3 class="modal-title" id="changePassword">
+                            Change Password
+                          </h3>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          <form>
+                            <div class="mb-3">
+                              <label for="" class="form-label"
+                                >New Password:</label
+                              >
+                              <input type="email" class="form-control" />
+                            </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary">
+                            Change Password
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- END MAIN -->
+      </section>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CUSTOM JS -->
+    <script src="../assets/js/navbar.js"></script>
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>
